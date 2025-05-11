@@ -3,7 +3,7 @@ using UnityEngine;
 public class CajaTest : MonoBehaviour
 {
     private Rigidbody2D rb;
-
+    public GameObject uiVictory;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -22,7 +22,7 @@ public class CajaTest : MonoBehaviour
         Vector3 tilt = Input.gyro.gravity;
 
         // Aplica fuerza basada en la inclinación (escala ajustable)
-        Vector2 fuerza = new Vector2(tilt.x, tilt.y) * 10f; // Puedes ajustar el multiplicador
+        Vector2 fuerza = new Vector2(tilt.x, tilt.y) * 10f; 
         rb.AddForce(fuerza, ForceMode2D.Force);
     }
 
@@ -30,8 +30,8 @@ public class CajaTest : MonoBehaviour
 {
     if (other.CompareTag("Meta"))
     {
-        Debug.Log("¡Nivel completado!");
-        // Aquí puedes mostrar UI, pausar el juego, cargar otro nivel, etc.
+        uiVictory.SetActive(true);
+       
     }
 }
 

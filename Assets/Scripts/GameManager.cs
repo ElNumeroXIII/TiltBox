@@ -7,7 +7,6 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        // Asegura que solo hay un GameManager
         if (Instance == null)
         {
             Instance = this;
@@ -15,34 +14,26 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            Destroy(gameObject);
+            Destroy(gameObject); // evita duplicados
         }
-    }
-
-    public void CargarEscena(string nombre)
-    {
-        SceneManager.LoadScene(nombre);
-    }
-
-    public void NivelCompletado()
-    {
-        CargarEscena("NivelCompletado");
-    }
-
-    public void VolverAlMenu()
-    {
-        CargarEscena("MenuPrincipal");
     }
 
     public void CargarNivel(string nombre)
     {
-        CargarEscena(nombre);
+        Debug.Log("Cargando escena: " + nombre);
+        SceneManager.LoadScene(nombre);
     }
 
-        public void SalirDelJuego()
+    public void VolverAlMenu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void SalirDelJuego()
     {
         Debug.Log("Saliendo del juego...");
         Application.Quit();
     }
 }
+
 
