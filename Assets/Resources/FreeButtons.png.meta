@@ -250,6 +250,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -1322,7 +1335,55 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      FreeButtons_0: -573183054098647697
+      FreeButtons_1: -5327115484206848561
+      FreeButtons_10: 2275664341652945352
+      FreeButtons_11: 8342795278019666843
+      FreeButtons_12: 1853432787045681283
+      FreeButtons_13: -7020077707249382241
+      FreeButtons_14: 844053019114798675
+      FreeButtons_15: -6516808230142346855
+      FreeButtons_16: 5415235168661532364
+      FreeButtons_17: 1524319205409311624
+      FreeButtons_18: -3561049491036766808
+      FreeButtons_19: 4810471490201118007
+      FreeButtons_2: -7599341431641528906
+      FreeButtons_20: -5209576573885439995
+      FreeButtons_21: -531454963280377678
+      FreeButtons_22: 8443590604065680605
+      FreeButtons_23: 803027572546221702
+      FreeButtons_24: -2049578783902739592
+      FreeButtons_25: -7020335176267859269
+      FreeButtons_26: 2129590843107075270
+      FreeButtons_27: 4661604052352263667
+      FreeButtons_28: -1451039214317123384
+      FreeButtons_29: 2009626378820013384
+      FreeButtons_3: -2249575841473866649
+      FreeButtons_30: 5530453565247512101
+      FreeButtons_31: 5744208355720564610
+      FreeButtons_32: -6686103683342455210
+      FreeButtons_33: -7257439744857560248
+      FreeButtons_34: 6195599749522469985
+      FreeButtons_35: 1861593486939890823
+      FreeButtons_36: -1128834299794263617
+      FreeButtons_37: -3749603736299751064
+      FreeButtons_38: 8912937129718838802
+      FreeButtons_39: -7322439115505505365
+      FreeButtons_4: -548186824867959537
+      FreeButtons_40: -3620139482958366603
+      FreeButtons_41: -1465082556712174792
+      FreeButtons_42: -197602075528262759
+      FreeButtons_43: -7901357512624061802
+      FreeButtons_44: -5568043374229979903
+      FreeButtons_45: 2812543848228804452
+      FreeButtons_46: -4557732144062666100
+      FreeButtons_47: 6090083740451586242
+      FreeButtons_5: 3528734768304526212
+      FreeButtons_6: -8190195831495673139
+      FreeButtons_7: 3068999083954807491
+      FreeButtons_8: -5300371265600571898
+      FreeButtons_9: -7566937458430167211
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
