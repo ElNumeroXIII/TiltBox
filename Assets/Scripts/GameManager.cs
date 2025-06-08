@@ -29,7 +29,15 @@ public class GameManager : MonoBehaviour
     private bool primerRespawnHecho = false;
 
     /// Configura la instancia Singleton y registra OnSceneLoaded.
-    
+
+    private int ExtraerNumero(string sceneName)
+    {
+        if (sceneName.StartsWith("Scene") && int.TryParse(sceneName.Substring(5), out int num))
+            return num;
+        return 0;
+    }
+
+
     private void Awake()
     {
         if (Instance == null)
@@ -77,13 +85,24 @@ public class GameManager : MonoBehaviour
         if (sceneName.StartsWith("Scene"))
         {
             // Guardar progreso
-            PlayerPrefs.SetString("ProgresoGuardado", sceneName);
-            PlayerPrefs.Save();
-            Debug.Log("Progreso guardado: " + sceneName);
-
             if (SaveSystem.Instance != null)
             {
                 SaveSystem.Instance.GuardarProgreso(sceneName);
+            }
+            else
+            {
+                // Si por algún motivo SaveSystem no está disponible, como fallback puedes usar la lógica que ya tienes:
+                string progresoActual = PlayerPrefs.GetString("ProgresoGuardado", "Scene101");
+
+                int nuevo = ExtraerNumero(sceneName);
+                int actual = ExtraerNumero(progresoActual);
+
+                if (nuevo > actual)
+                {
+                    PlayerPrefs.SetString("ProgresoGuardado", sceneName);
+                    PlayerPrefs.Save();
+                    Debug.Log("Progreso local guardado (fallback): " + sceneName);
+                }
             }
 
 
